@@ -4,24 +4,37 @@ import axios from "axios";
 import { StarshipList, StarshipCard, StarshipName } from "./Starships.styled";
 
 function Starships() {
-  const [starhips, setStarships] = useState([]);
+  const [starhips, setStarships] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1);
-
-  console.log(starhips);
+  const [moreLoading, setMoreLoading] = useState(false);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     axios
-      .get(`https://swapi.dev/api/starships/?page=${page}`)
+      .get(`https://swapi.dev/api/starships/?search=${query}`)
       .then((response) => {
-        const data = response.data.results;
-        setStarships((prevData) => [...prevData, ...data]);
+        setStarships(response.data);
         setLoading(false);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [page]);
+  }, [query]);
+
+  const handleLoadMore = (url) => {
+    if (!url) return null;
+    setMoreLoading(true);
+    axios.get(url).then((response) => {
+      const data = response.data;
+      setStarships((prevData) => {
+        return {
+          ...data,
+          results: [...prevData.results, ...data.results],
+        };
+      });
+      setMoreLoading(false);
+    });
+  };
 
   return (
     <div>
@@ -29,17 +42,31 @@ function Starships() {
       {loading ? (
         <p>loading...</p>
       ) : (
-        <StarshipList>
-          {starhips.map((starship) => {
-            return (
-              <StarshipCard key={starship.name}>
-                <StarshipName> {starship.name}</StarshipName>
-                <p>{starship.model}</p>
-              </StarshipCard>
-            );
-          })}
-          <button onClick={() => setPage(page + 1)}>load more...</button>
-        </StarshipList>
+        <>
+          <input
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+            type="search"
+            placeholder="search starship"
+          />
+          <StarshipList>
+            {starhips.results.map((starship) => {
+              return (
+                <StarshipCard key={starship.name}>
+                  <StarshipName> {starship.name}</StarshipName>
+                  <p>{starship.model}</p>
+                </StarshipCard>
+              );
+            })}
+            {starhips.next && (
+              <button onClick={() => handleLoadMore(starhips.next)}>
+                {moreLoading ? "Loading..." : " Load more..."}
+              </button>
+            )}
+          </StarshipList>
+        </>
       )}
     </div>
   );
