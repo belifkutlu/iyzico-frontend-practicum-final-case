@@ -1,4 +1,6 @@
 import styled from "styled-components";
 
-export const StarshipTitle = styled.div``;
+export const StarshipDetailTitle = styled.h1`
+  color: red;
+`;
 export const Name = styled.div``;

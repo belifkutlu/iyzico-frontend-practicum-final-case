@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import StarshipCard from "../../components/StarshipCard";
 import SearchInput from "../../components/SearchInput";
@@ -13,6 +14,15 @@ function Starships() {
   const [loading, setLoading] = useState(true);
   const [moreLoading, setMoreLoading] = useState(false);
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleNavigate = (starship) => {
+    navigate("/starship-detail", {
+      state: {
+        starship,
+      },
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,7 +69,11 @@ function Starships() {
           />
           <StarshipList>
             {starships.results.map((starship) => (
-              <StarshipCard starship={starship} key={starship.name} />
+              <StarshipCard
+                starship={starship}
+                key={starship.name}
+                onClick={() => handleNavigate(starship)}
+              />
             ))}
 
             {starships.next && (
