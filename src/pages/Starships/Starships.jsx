@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-import { StarshipList, StarshipCard, StarshipName } from "./Starships.styled";
+import StarshipCard from "../../components/StarshipCard";
+import SearchInput from "../../components/SearchInput";
+import LoadMoreButton from "../../components/LoadMoreButton";
+
 import { loadMoreStarship, searchStarship } from "../../api/starships";
 
+import { StarshipList } from "./Starships.styled";
+
 function Starships() {
-  const [starhips, setStarships] = useState(null);
+  const [starships, setStarships] = useState(null);
   const [loading, setLoading] = useState(true);
   const [moreLoading, setMoreLoading] = useState(false);
   const [query, setQuery] = useState("");
@@ -46,28 +51,24 @@ function Starships() {
         <p>loading...</p>
       ) : (
         <>
-          {/* // Search Input component */}
-          <input
+          <SearchInput
             value={query}
-            onChange={(e) => {
+            onInputhange={(e) => {
               setQuery(e.target.value);
             }}
-            type="search"
-            placeholder="search starship"
           />
           <StarshipList>
-            {/* // startsipList item component */}
-            {starhips.results.map((starship) => (
-              <StarshipCard key={starship.name}>
-                <StarshipName> {starship.name}</StarshipName>
-                <p>{starship.model}</p>
-              </StarshipCard>
+            {starships.results.map((starship) => (
+              <StarshipCard starship={starship} key={starship.name} />
             ))}
-            {/* // handle more buttpn component */}
-            {starhips.next && (
-              <button onClick={() => handleLoadMore(starhips.next)}>
-                {moreLoading ? "Loading..." : " Load more..."}
-              </button>
+
+            {starships.next && (
+              <LoadMoreButton
+                moreLoading={moreLoading}
+                onHandleLoadMore={() => {
+                  handleLoadMore(starships.next);
+                }}
+              />
             )}
           </StarshipList>
         </>
