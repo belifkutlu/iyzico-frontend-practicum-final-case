@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBlackExtendedBT.woff2") format("woff2"),
+    url("../fonts/ZurichBlackExtendedBT.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich Blk BT";
+  src: url("../fonts/ZurichBT-Black.woff2") format("woff2"),
+    url("../fonts/ZurichBT-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich Blk BT";
+  src: url("../fonts/ZurichBT-BlackItalic.woff2") format("woff2"),
+    url("../fonts/ZurichBT-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich Cn BT";
+  src: url("../fonts/ZurichBT-RomanCondensed.woff2") format("woff2"),
+    url("../fonts/ZurichBT-RomanCondensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich BT";
+  src: url("../fonts/ZurichBT-Roman.woff2") format("woff2"),
+    url("../fonts/ZurichBT-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich LtCn BT";
+  src: url("../fonts/ZurichBT-LightCondensedItalic.woff2") format("woff2"),
+    url("../fonts/ZurichBT-LightCondensedItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich Cn BT";
+  src: url("../fonts/ZurichBT-ItalicCondensed.woff2") format("woff2"),
+    url("../fonts/ZurichBT-ItalicCondensed.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich Cn BT";
+  src: url("../fonts/ZurichBT-BoldCondensedItalic.woff2") format("woff2"),
+    url("../fonts/ZurichBT-BoldCondensedItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich UBlkEx BT";
+  src: url("../fonts/ZurichBT-UltraBlackExtended.woff2") format("woff2"),
+    url("../fonts/ZurichBT-UltraBlackExtended.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBoldBT.woff2") format("woff2"),
+    url("../fonts/ZurichBoldBT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBlackBT.woff2") format("woff2"),
+    url("../fonts/ZurichBlackBT.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBlackItalicBT.woff2") format("woff2"),
+    url("../fonts/ZurichBlackItalicBT.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich Lt BT";
+  src: url("../fonts/ZurichBT-Light.woff2") format("woff2"),
+    url("../fonts/ZurichBT-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich XBlk BT";
+  src: url("../fonts/ZurichBT-ExtraBlack.woff2") format("woff2"),
+    url("../fonts/ZurichBT-ExtraBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich LtCn BT";
+  src: url("../fonts/ZurichBT-LightCondensed.woff2") format("woff2"),
+    url("../fonts/ZurichBT-LightCondensed.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich XCn BT";
+  src: url("../fonts/ZurichBT-ExtraCondensed.woff2") format("woff2"),
+    url("../fonts/ZurichBT-ExtraCondensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBoldCondensedItalicBT.woff2") format("woff2"),
+    url("../fonts/ZurichBoldCondensedItalicBT.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBoldExtendedBT.woff2") format("woff2"),
+    url("../fonts/ZurichBoldExtendedBT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichExtendedBT.woff2") format("woff2"),
+    url("../fonts/ZurichExtendedBT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichLightItalicBT.woff2") format("woff2"),
+    url("../fonts/ZurichLightItalicBT.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichCondensedItalicBT.woff2") format("woff2"),
+    url("../fonts/ZurichCondensedItalicBT.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBT.woff2") format("woff2"),
+    url("../fonts/ZurichBT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichUltraBlackExtendedBT.woff2") format("woff2"),
+    url("../fonts/ZurichUltraBlackExtendedBT.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichCondensedBT.woff2") format("woff2"),
+    url("../fonts/ZurichCondensedBT.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich LtCn BT";
+  src: url("../fonts/ZurichBT-LightCondensedItalic.woff2") format("woff2"),
+    url("../fonts/ZurichBT-LightCondensedItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich LtXCn BT";
+  src: url("../fonts/ZurichBT-LightExtraCondensed.woff2") format("woff2"),
+    url("../fonts/ZurichBT-LightExtraCondensed.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich BdXCn BT";
+  src: url("../fonts/ZurichBT-BoldExtraCondensed.woff2") format("woff2"),
+    url("../fonts/ZurichBT-BoldExtraCondensed.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichLightBT.woff2") format("woff2"),
+    url("../fonts/ZurichLightBT.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zurich";
+  src: url("../fonts/ZurichBoldCondensedBT.woff2") format("woff2"),
+    url("../fonts/ZurichBoldCondensedBT.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Zurich";
+  background-color: #242831;
+}

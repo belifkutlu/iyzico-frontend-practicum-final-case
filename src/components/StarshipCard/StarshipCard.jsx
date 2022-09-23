@@ -1,13 +1,26 @@
 import React from "react";
 
-import { StyledStarshipCard, StarshipName } from "./StarshipCard.styled";
+import {
+  StyledStarshipCard,
+  StarshipName,
+  StarshipImage,
+  StarshipTitle,
+  StarshipHiperdriveRating,
+  StarshipModel,
+} from "./StarshipCard.styled";
 
 function StarshipCard({ starship, onClick }) {
+  const id = starship.url.split("/")[5];
   return (
     <StyledStarshipCard key={starship.name} onClick={onClick}>
       <StarshipName>{starship.name}</StarshipName>
-      <p>Model: {starship.model}</p>
-      <p>Hyperdrive Rating: {starship.hyperdrive_rating}</p>
+      {/* <StarshipHiperdriveRating>
+          {starship.hyperdrive_rating}
+        </StarshipHiperdriveRating> */}
+      <StarshipImage
+        src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png`}
+      />
+      <StarshipModel>{starship.model}</StarshipModel>
     </StyledStarshipCard>
   );
 }

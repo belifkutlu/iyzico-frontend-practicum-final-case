@@ -7,7 +7,19 @@ import LoadMoreButton from "../../components/LoadMoreButton";
 
 import { loadMoreStarship, searchStarship } from "../../api/starships";
 
-import { StarshipList } from "./Starships.styled";
+import gif from "../../assests/2-unscreen.gif";
+
+import logo from "../../assests/StarwarsLogo.png";
+
+import {
+  StarshipList,
+  Loading,
+  Container,
+  StarwarsLogo,
+  StyledSearchDiv,
+  LoadMoreDiv,
+  SearchStarshipPlaceholder,
+} from "./Starships.styled";
 
 function Starships() {
   const [starships, setStarships] = useState(null);
@@ -55,18 +67,24 @@ function Starships() {
   };
 
   return (
-    <div>
-      <h1>Starships Page</h1>
+    <Container>
+      <StarwarsLogo src={logo} />
       {loading ? (
-        <p>loading...</p>
+        <Loading src={gif} />
       ) : (
         <>
-          <SearchInput
-            value={query}
-            onInputhange={(e) => {
-              setQuery(e.target.value);
-            }}
-          />
+          <StyledSearchDiv>
+            <SearchStarshipPlaceholder>
+              Search Starship
+            </SearchStarshipPlaceholder>
+            <SearchInput
+              value={query}
+              onInputhange={(e) => {
+                setQuery(e.target.value);
+              }}
+            />
+          </StyledSearchDiv>
+
           <StarshipList>
             {starships.results.map((starship) => (
               <StarshipCard
@@ -77,17 +95,19 @@ function Starships() {
             ))}
 
             {starships.next && (
-              <LoadMoreButton
-                moreLoading={moreLoading}
-                onHandleLoadMore={() => {
-                  handleLoadMore(starships.next);
-                }}
-              />
+              <LoadMoreDiv>
+                <LoadMoreButton
+                  moreLoading={moreLoading}
+                  onHandleLoadMore={() => {
+                    handleLoadMore(starships.next);
+                  }}
+                />
+              </LoadMoreDiv>
             )}
           </StarshipList>
         </>
       )}
-    </div>
+    </Container>
   );
 }
 
