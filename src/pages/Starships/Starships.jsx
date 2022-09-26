@@ -5,14 +5,13 @@ import StarshipCard from "../../components/StarshipCard";
 import SearchInput from "../../components/SearchInput";
 import LoadMoreButton from "../../components/LoadMoreButton";
 import Loading from "../../components/Loading";
-import { loadMoreStarship, searchStarship } from "../../api/starships";
+import StarwarsLogo from "../../components/StarwarsLogo";
 
-import logo from "../../assests/StarwarsLogo.png";
+import { loadMoreStarship, searchStarship } from "../../api/starships";
 
 import {
   StarshipList,
   Container,
-  StarwarsLogo,
   LoadMoreWrapper,
   NoStarhip,
 } from "./Starships.styled";
@@ -60,7 +59,7 @@ function Starships() {
 
   return (
     <Container>
-      <StarwarsLogo src={logo} />
+      <StarwarsLogo />
       <SearchInput
         value={query}
         placeholder="Search Starship"

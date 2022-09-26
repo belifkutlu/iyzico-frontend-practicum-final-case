@@ -19,13 +19,6 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const StarwarsLogo = styled.img`
-  width: 200px;
-  display: block;
-  margin: auto;
-  padding: 40px 0;
-`;
-
 export const LoadMoreWrapper = styled.div`
   display: flex;
   align-items: center;
