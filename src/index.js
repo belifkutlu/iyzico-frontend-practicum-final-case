@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./fonts/Zurich/ZURCHXC.ttf";
 
 import App from "./App";
 import "./assests/css/normalize.css";
