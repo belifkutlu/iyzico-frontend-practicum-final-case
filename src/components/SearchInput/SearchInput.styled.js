@@ -16,8 +16,15 @@ export const StyledSearchInput = styled.input`
 
 export const StyledSearchIcon = styled(SearchIcon)`
   position: absolute;
-  top: 65%;
+  top: 50%;
   transform: translateY(-50%);
   right: 20px;
   cursor: pointer;
+`;
+
+export const StyledSearchWrapper = styled.div`
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 `;

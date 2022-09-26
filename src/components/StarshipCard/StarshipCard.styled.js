@@ -17,6 +17,14 @@ export const StyledStarshipCard = styled.div`
   cursor: pointer;
   padding: 20px;
   background-image: url("${bgimg}");
+  transition: all 0.15s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+
+    img {
+      transform: scale(1.1);
+    }
+  }
 `;
 
 export const StarshipName = styled.h3`
@@ -25,12 +33,15 @@ export const StarshipName = styled.h3`
   padding: 0 10px;
   margin: 0;
   text-align: center;
+  height: 60px;
+  font-size: 30px;
 `;
 
 export const StarshipImage = styled.img`
   width: 100%;
   height: 200px;
   object-fit: contain;
+  transition: all 0.2s ease-in-out;
 `;
 
 export const StarshipTitle = styled.div`
@@ -53,4 +64,6 @@ export const StarshipModel = styled.p`
   margin: 0;
   text-align: center;
   font-size: 16px;
+  font-family: "Niveau Grotesk";
+  font-weight: 500;
 `;

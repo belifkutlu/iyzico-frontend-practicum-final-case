@@ -26,23 +26,7 @@ export const StarwarsLogo = styled.img`
   padding: 40px 0;
 `;
 
-export const Loading = styled.img`
-  display: flex;
-  align-items: center;
-
-  margin: auto;
-  margin-top: 80px;
-  width: 200px;
-`;
-
-export const StyledSearchDiv = styled.div`
-  position: relative;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-export const LoadMoreDiv = styled.div`
+export const LoadMoreWrapper = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
@@ -50,9 +34,9 @@ export const LoadMoreDiv = styled.div`
   padding: 20px;
 `;
 
-export const SearchStarshipPlaceholder = styled.p`
-  color: #ffc451;
-  font-size: 18px;
-  margin: 0;
-  margin-bottom: 5px;
+export const NoStarhip = styled.div`
+  margin: 40px auto 0;
+  text-align: center;
+  color: white;
+  font-size: 20px;
 `;

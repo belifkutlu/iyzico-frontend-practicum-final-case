@@ -2,10 +2,10 @@ import React from "react";
 
 import { StyledLoadMoreButton } from "./LoadMoreButton.styled";
 
-function LoadMoreButton({ onHandleLoadMore, moreLoading }) {
+function LoadMoreButton({ onLoadMore, loading }) {
   return (
-    <StyledLoadMoreButton onClick={onHandleLoadMore}>
-      {moreLoading ? "Loading..." : "Load More"}{" "}
+    <StyledLoadMoreButton onClick={onLoadMore}>
+      {loading ? "Loading..." : "Load More"}
     </StyledLoadMoreButton>
   );
 }

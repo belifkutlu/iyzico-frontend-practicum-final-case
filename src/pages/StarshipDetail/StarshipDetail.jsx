@@ -1,30 +1,38 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
+import BackButton from "../../components/BackButton";
+import RaitingStars from "../../components/Icons/RaitingStars";
 
 import shadow from "../../assests/shadow.png";
-import BackIcon from "../../components/Icons/BackIcon";
 
 import {
-  StarshipDetailTitle,
   Container,
   Content,
+  DetailHeader,
   ModelName,
-  HiperDriveRaiting,
-  OrderData,
+  RaitingWrapper,
+  HipedriveRaiting,
+  Section,
   StarshipImage,
   ShadowImage,
   StarshipName,
   StarshipImagesGroup,
-  Btn,
-  BtnWrapper,
+  Info,
+  InfoTitle,
   InfoWrapper,
-  BackBtn,
+  InfoValue,
+  InfoTitleWrapper,
+  StyledRaitingStars,
+  RaitingStarsWrapper,
+  StarhipModelWrp,
 } from "./StarshipDetail.styled";
 
 function StarshipDetail() {
   const {
     state: { starship },
   } = useLocation();
+  const navigate = useNavigate();
 
   const {
     name,
@@ -39,18 +47,33 @@ function StarshipDetail() {
 
   const id = starship.url.split("/")[5];
 
+  const titles = [
+    "Passengers",
+    "Max Atmosphering Speed",
+    "Manufacturer",
+    "Crew",
+    "Cargo Capacity",
+  ];
   return (
     <Container>
-      <BackBtn>
-        <BackIcon />{" "}
-      </BackBtn>
+      <BackButton onClick={() => navigate(-1)} />
+
       <Content>
-        <StarshipDetailTitle>
-          <StarshipName>{starship.name}</StarshipName>
-          <HiperDriveRaiting>{hyperdrive_rating}</HiperDriveRaiting>
-        </StarshipDetailTitle>
-        <ModelName>{model}</ModelName>
-        <OrderData>
+        <DetailHeader>
+          <StarshipName>{name}</StarshipName>
+          <RaitingWrapper>
+            <RaitingStarsWrapper>
+              <StyledRaitingStars />
+              <p>Hiperdrive Raiting</p>
+            </RaitingStarsWrapper>
+            <HipedriveRaiting>{hyperdrive_rating}</HipedriveRaiting>
+          </RaitingWrapper>
+        </DetailHeader>
+        <StarhipModelWrp>
+          <ModelName>Model: {model}</ModelName>
+        </StarhipModelWrp>
+
+        <Section>
           <StarshipImagesGroup>
             <StarshipImage
               src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png`}
@@ -59,32 +82,22 @@ function StarshipDetail() {
             <ShadowImage src={shadow} alt="" />
           </StarshipImagesGroup>
           <InfoWrapper>
+            <InfoTitleWrapper>
+              {titles.map((title) => (
+                <InfoTitle>
+                  <Info>{title}</Info>
+                </InfoTitle>
+              ))}
+            </InfoTitleWrapper>
             <div>
-              <BtnWrapper>
-                <Btn>Passengers</Btn>
-              </BtnWrapper>
-              <BtnWrapper>
-                <Btn>Max Atmosphering Speed</Btn>
-              </BtnWrapper>
-              <BtnWrapper>
-                <Btn>Manufacturer</Btn>
-              </BtnWrapper>
-              <BtnWrapper>
-                <Btn>Crew</Btn>
-              </BtnWrapper>
-              <BtnWrapper>
-                <Btn>Cargo Capacity</Btn>
-              </BtnWrapper>
-            </div>
-            <div>
-              <p>{passengers}</p>
-              <p> {max_atmosphering_speed} </p>
-              <p> {manufacturer}</p>
-              <p>{crew}</p>
-              <p>{cargo_capacity}</p>
+              <InfoValue>{passengers}</InfoValue>
+              <InfoValue> {max_atmosphering_speed} </InfoValue>
+              <InfoValue> {manufacturer}</InfoValue>
+              <InfoValue>{crew}</InfoValue>
+              <InfoValue>{cargo_capacity}</InfoValue>
             </div>
           </InfoWrapper>
-        </OrderData>
+        </Section>
       </Content>
     </Container>
   );

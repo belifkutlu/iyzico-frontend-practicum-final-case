@@ -1,14 +1,29 @@
 import React from "react";
 
-import { StyledSearchInput, StyledSearchIcon } from "./SearchInput.styled";
+import {
+  StyledSearchInput,
+  StyledSearchIcon,
+  StyledSearchWrapper,
+} from "./SearchInput.styled";
 
-function SearchInput({ query, onInputhange }) {
+function SearchInput({ value, onInputhange, onSearch, placeholder }) {
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      onSearch();
+    }
+  };
+
   return (
-    <>
-      <StyledSearchInput value={query} onChange={onInputhange} type="search" />
-
-      <StyledSearchIcon />
-    </>
+    <StyledSearchWrapper>
+      <StyledSearchInput
+        value={value}
+        onChange={onInputhange}
+        type="search"
+        placeholder={placeholder}
+        onKeyDown={handleKeyDown}
+      />
+      <StyledSearchIcon onClick={onSearch} />
+    </StyledSearchWrapper>
   );
 }
 
