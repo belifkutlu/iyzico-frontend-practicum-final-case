@@ -9,4 +9,9 @@ export const StyledBackBtn = styled.button`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
 `;

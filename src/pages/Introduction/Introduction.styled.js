@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import introBg from "../../assests/images/introbg.jpg";
 import StarwarsLogo from "../../components/StarwarsLogo";
-import Volume from "../../components/Volume";
 
 export const IntroWrapper = styled.div`
   background-image: url("${introBg}");
@@ -76,12 +75,12 @@ export const IntroContent = styled.div`
       opacity: 1;
     }
     100% {
-      top: 70%;
+      top: 50%;
       opacity: 0;
     }
   }
   p {
-    font-size: 30px;
+    font-size: 45px;
     color: #e5bf6f;
     text-transform: uppercase;
     text-align: justify;
@@ -89,8 +88,8 @@ export const IntroContent = styled.div`
   }
 `;
 
-export const IntroSubtitle = styled.p`
-  font-size: 20px;
+export const IntroSubtitle = styled.h3`
+  font-size: 40px;
   margin: 0;
   margin-top: 10px;
   font-family: "Niveau Grotesk";
@@ -105,7 +104,7 @@ export const IntroButton = styled.button`
   border: 1px solid #d6b055;
   background-color: transparent;
   padding: 10px;
-  color: #e5bf6f;
+  color: #d6b055;
   border-radius: 5px;
   font-size: 20px;
   margin: 0 auto;

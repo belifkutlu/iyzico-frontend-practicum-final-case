@@ -18,11 +18,25 @@ export const StyledStarshipCard = styled.div`
   padding: 20px;
   background-image: url("${bgimg}");
   transition: all 0.15s ease-in-out;
+  user-select: none;
+
   &:hover {
     transform: scale(1.2);
 
     img {
       transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: calc(100% - 60px);
+
+    &:hover {
+      transform: scale(1);
+      img {
+        transform: scale(1);
+        pointer-events: none;
+      }
     }
   }
 `;

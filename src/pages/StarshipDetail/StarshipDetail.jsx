@@ -57,7 +57,6 @@ function StarshipDetail() {
   return (
     <Container>
       <BackButton onClick={() => navigate(-1)} />
-
       <Content>
         <DetailHeader>
           <StarshipName>{name}</StarshipName>
@@ -72,11 +71,10 @@ function StarshipDetail() {
         <StarhipModelWrp>
           <ModelName>Model: {model}</ModelName>
         </StarhipModelWrp>
-
         <Section>
           <StarshipImagesGroup>
             <StarshipImage
-              src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png`}
+              src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png?updatedAt=1664296476820`}
               alt="/"
             />
             <ShadowImage src={shadow} alt="" />

@@ -27,21 +27,27 @@ function Introduction() {
           <StyledLogo />
           <ContentWrapper>
             <IntroContent>
-              <h2>A long time ago in a galaxy far, far away...</h2>
+              <h2>
+                A long time ago in a galaxy far, <br /> far away...
+              </h2>
               <p>
                 Turmoil has engulfed the galactic republic. The taxation of
                 trade routes to outlying star systems is in dispute.
               </p>
               <p>
+                Hoping to resolve the matter with a blockade of deadly
                 battleships, the greedy trade federation has stopped all
                 shipping to the small planet of Naboo.
               </p>
               <p>
                 While the congress of the republic endlessly debates this
-                alarming chain of events, the supreme chancellor has secretly
-                dispatched two jedi knights, the guardians of peace and justice
-                in the galaxy,to settle the conflict....
+                alarming chain of events,
               </p>
+              <p>
+                the supreme chancellor has secretly dispatched two jedi knights,
+              </p>
+              <p>the guardians of peace and justice in the galaxy, </p>
+              <p>to settle the conflict....</p>
               <IntroSubtitle>May the force be with you! ...</IntroSubtitle>
             </IntroContent>
           </ContentWrapper>

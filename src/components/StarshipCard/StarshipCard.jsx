@@ -18,7 +18,7 @@ function StarshipCard({ starship, onClick }) {
           {starship.hyperdrive_rating}
         </StarshipHiperdriveRating> */}
       <StarshipImage
-        src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png`}
+        src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png?updatedAt=1664296476820`}
       />
       <StarshipModel>{starship.model}</StarshipModel>
     </StyledStarshipCard>

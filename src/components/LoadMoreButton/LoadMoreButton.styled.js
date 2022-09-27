@@ -10,5 +10,9 @@ export const StyledLoadMoreButton = styled.button`
   cursor: pointer;
   width: 30%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   /* border: 1px solid  */
 `;

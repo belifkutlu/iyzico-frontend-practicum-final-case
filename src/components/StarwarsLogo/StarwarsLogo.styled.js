@@ -5,4 +5,8 @@ export const Logo = styled.img`
   display: block;
   margin: auto;
   padding: 40px 0;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
 `;
