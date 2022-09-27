@@ -2,11 +2,11 @@ import styled from "styled-components";
 import SearchIcon from "../Icons/SearchIcon";
 
 export const StyledSearchInput = styled.input`
-  border: 1px solid #d6b055;
+  border: 1px solid ${({ theme }) => theme.colors.lightYellow};
   height: 50px;
   width: 100%;
-  background-color: #242831;
-  color: #ffc451;
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.yellow};
   display: block;
   margin-bottom: 20px;
   padding-left: 10px;

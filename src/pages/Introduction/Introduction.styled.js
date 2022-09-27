@@ -27,29 +27,28 @@ export const IntroSection = styled.div`
 `;
 
 export const StyledLogo = styled(StarwarsLogo)`
-  animation: logo 15s linear forwards;
+  animation: logo 43s linear forwards;
   @keyframes logo {
     0% {
       width: 200px;
       opacity: 1;
     }
-    10% {
-      width: 190px;
-      opacity: 1;
-    }
-    20% {
-      width: 180px;
-    }
-    90% {
-      width: 10px;
-      opacity: 1;
-    }
-    100% {
+
+    50% {
       width: 0;
       opacity: 0;
     }
+    90% {
+      width: 0px;
+      opacity: 0;
+    }
+    100% {
+      width: 200px;
+      opacity: 1;
+    }
   }
 `;
+
 export const ContentWrapper = styled.div`
   height: 100em;
   width: 100%;
@@ -61,7 +60,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const IntroContent = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   position: absolute;
   top: 100%;
   animation: reel 40s linear 3s forwards;
@@ -81,7 +80,7 @@ export const IntroContent = styled.div`
   }
   p {
     font-size: 45px;
-    color: #e5bf6f;
+    color: ${({ theme }) => theme.colors.yellow};
     text-transform: uppercase;
     text-align: justify;
     letter-spacing: 5;
@@ -101,10 +100,10 @@ export const IntroButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #d6b055;
+  border: 1px solid ${({ theme }) => theme.colors.lightYellow};
   background-color: transparent;
   padding: 10px;
-  color: #d6b055;
+  color: ${({ theme }) => theme.colors.yellow};
   border-radius: 5px;
   font-size: 20px;
   margin: 0 auto;
@@ -112,4 +111,9 @@ export const IntroButton = styled.button`
   position: absolute;
   bottom: 50px;
   right: 50px;
+  @media (max-width: 768px) {
+    top: 50px;
+    right: 20px;
+    bottom: auto;
+  }
 `;

@@ -54,7 +54,7 @@ function Introduction() {
         </IntroSection>
         <IntroButton
           onClick={() => {
-            navigate("/");
+            navigate("/starships");
           }}
         >
           ENTER THE UNIVERSE

@@ -25,6 +25,7 @@ function Volume() {
         {volume ? <VolumeUpIcon /> : <VolumeMuteIcon />}
       </VolumeWrapper>
       <audio
+        autoPlay
         ref={audioRef}
         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/MainTitle.ogg"
       ></audio>

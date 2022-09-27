@@ -30,6 +30,6 @@ export const LoadMoreWrapper = styled.div`
 export const NoStarhip = styled.div`
   margin: 40px auto 0;
   text-align: center;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   font-size: 20px;
 `;
