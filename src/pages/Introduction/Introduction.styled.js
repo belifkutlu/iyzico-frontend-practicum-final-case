@@ -64,7 +64,13 @@ export const IntroContent = styled.div`
   position: absolute;
   top: 100%;
   animation: reel 40s linear 3s forwards;
-
+  p {
+    font-size: 45px;
+    color: ${({ theme }) => theme.colors.yellow};
+    text-transform: uppercase;
+    text-align: justify;
+    letter-spacing: 5;
+  }
   @keyframes reel {
     0% {
       top: 100%;
@@ -78,13 +84,6 @@ export const IntroContent = styled.div`
       opacity: 0;
     }
   }
-  p {
-    font-size: 45px;
-    color: ${({ theme }) => theme.colors.yellow};
-    text-transform: uppercase;
-    text-align: justify;
-    letter-spacing: 5;
-  }
 `;
 
 export const IntroSubtitle = styled.h3`
@@ -94,13 +93,10 @@ export const IntroSubtitle = styled.h3`
   font-family: "Niveau Grotesk";
 `;
 
-export const SkipIntro = styled.div``;
-
-export const IntroButton = styled.button`
+export const IntroButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.lightYellow};
   background-color: transparent;
   padding: 10px;
   color: ${({ theme }) => theme.colors.yellow};

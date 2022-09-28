@@ -1,13 +1,16 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
-import BackButton from "../../components/BackButton";
-import RaitingStars from "../../components/Icons/RaitingStars";
+import Container from "../../components/Container";
+import StarshipInfo from "./components/StarshipInfo";
+import getStarshipId from "../../utils/getStarshipId";
 
+import Button from "../../components/Button";
 import shadow from "../../assests/shadow.png";
+import BackIcon from "../../components/Icons/BackIcon";
 
 import {
-  Container,
   Content,
   DetailHeader,
   ModelName,
@@ -18,12 +21,6 @@ import {
   ShadowImage,
   StarshipName,
   StarshipImagesGroup,
-  Info,
-  InfoTitle,
-  InfoWrapper,
-  InfoValue,
-  InfoTitleWrapper,
-  StyledRaitingStars,
   RaitingStarsWrapper,
   StarhipModelWrp,
 } from "./StarshipDetail.styled";
@@ -34,36 +31,29 @@ function StarshipDetail() {
   } = useLocation();
   const navigate = useNavigate();
 
-  const {
-    name,
-    model,
-    hyperdrive_rating,
-    passengers,
-    max_atmosphering_speed,
-    manufacturer,
-    crew,
-    cargo_capacity,
-  } = starship;
+  const { name, model, hyperdrive_rating, url } = starship;
 
-  const id = starship.url.split("/")[5];
+  const id = getStarshipId(url);
 
-  const titles = [
-    "Passengers",
-    "Max Atmosphering Speed",
-    "Manufacturer",
-    "Crew",
-    "Cargo Capacity",
-  ];
   return (
     <Container>
-      <BackButton onClick={() => navigate(-1)} />
+      <Button onClick={() => navigate(-1)}>
+        <BackIcon />
+      </Button>
       <Content>
         <DetailHeader>
           <StarshipName>{name}</StarshipName>
           <RaitingWrapper>
             <RaitingStarsWrapper>
-              <StyledRaitingStars />
-              <p>Hiperdrive Raiting</p>
+              <ReactStars
+                count={5}
+                size={24}
+                activeColor="#FFC451"
+                value={Number(hyperdrive_rating)}
+                edit={false}
+                isHalf
+              />
+              <div>Hiperdrive Raiting</div>
             </RaitingStarsWrapper>
             <HipedriveRaiting>{hyperdrive_rating}</HipedriveRaiting>
           </RaitingWrapper>
@@ -79,22 +69,7 @@ function StarshipDetail() {
             />
             <ShadowImage src={shadow} alt="" />
           </StarshipImagesGroup>
-          <InfoWrapper>
-            <InfoTitleWrapper>
-              {titles.map((title) => (
-                <InfoTitle>
-                  <Info>{title}</Info>
-                </InfoTitle>
-              ))}
-            </InfoTitleWrapper>
-            <div>
-              <InfoValue>{passengers}</InfoValue>
-              <InfoValue> {max_atmosphering_speed} </InfoValue>
-              <InfoValue> {manufacturer}</InfoValue>
-              <InfoValue>{crew}</InfoValue>
-              <InfoValue>{cargo_capacity}</InfoValue>
-            </div>
-          </InfoWrapper>
+          <StarshipInfo starship={starship} />
         </Section>
       </Content>
     </Container>

@@ -1,26 +1,27 @@
 import React from "react";
+import getStarshipId from "../../utils/getStarshipId";
 
 import {
   StyledStarshipCard,
   StarshipName,
   StarshipImage,
-  StarshipTitle,
-  StarshipHiperdriveRating,
   StarshipModel,
 } from "./StarshipCard.styled";
 
 function StarshipCard({ starship, onClick }) {
-  const id = starship.url.split("/")[5];
+  const { name, url, model } = starship;
+  const id = getStarshipId(url);
+
   return (
-    <StyledStarshipCard key={starship.name} onClick={onClick}>
-      <StarshipName>{starship.name}</StarshipName>
+    <StyledStarshipCard key={name} onClick={onClick}>
+      <StarshipName>{name}</StarshipName>
       {/* <StarshipHiperdriveRating>
           {starship.hyperdrive_rating}
         </StarshipHiperdriveRating> */}
       <StarshipImage
         src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png?updatedAt=1664296476820`}
       />
-      <StarshipModel>{starship.model}</StarshipModel>
+      <StarshipModel>{model}</StarshipModel>
     </StyledStarshipCard>
   );
 }

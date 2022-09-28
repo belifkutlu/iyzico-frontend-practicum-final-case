@@ -1,15 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import Volume from "../../components/Volume";
-
+import VolumeButton from "./components/VolumeButton";
 import ArrowsIcon from "../../components/Icons/ArrowsIcon";
+import Button from "../../components/Button";
 
 import {
   IntroContainer,
   IntroSection,
   IntroContent,
-  SkipIntro,
   IntroButton,
   IntroWrapper,
   StyledLogo,
@@ -52,15 +51,17 @@ function Introduction() {
             </IntroContent>
           </ContentWrapper>
         </IntroSection>
-        <IntroButton
-          onClick={() => {
-            navigate("/starships");
-          }}
-        >
-          ENTER THE UNIVERSE
-          <ArrowsIcon />
+        <IntroButton>
+          <Button
+            onClick={() => {
+              navigate("/starships");
+            }}
+          >
+            ENTER THE UNIVERSE
+            <ArrowsIcon />
+          </Button>
         </IntroButton>
-        <Volume />
+        <VolumeButton />
       </IntroContainer>
     </IntroWrapper>
   );

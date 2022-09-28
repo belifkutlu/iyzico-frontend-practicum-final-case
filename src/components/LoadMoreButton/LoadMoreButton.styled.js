@@ -16,3 +16,11 @@ export const StyledLoadMoreButton = styled.button`
 
   /* border: 1px solid  */
 `;
+
+export const LoadMoreWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+`;

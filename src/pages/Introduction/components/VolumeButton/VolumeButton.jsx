@@ -1,9 +1,9 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
-import VolumeMuteIcon from "../Icons/VolumeMuteIcon";
-import VolumeUpIcon from "../Icons/VolumeUpIcon";
+import VolumeMuteIcon from "../../../../components/Icons/VolumeMuteIcon";
+import VolumeUpIcon from "../../../../components/Icons/VolumeUpIcon";
 
-import { VolumeWrapper } from "./Volume.styled";
+import { VolumeWrapper } from "./VolumeButton.styled";
 
 function Volume() {
   const [volume, setVolume] = useState(false);

@@ -1,35 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-import StarshipCard from "../../components/StarshipCard";
 import SearchInput from "../../components/SearchInput";
-import LoadMoreButton from "../../components/LoadMoreButton";
 import Loading from "../../components/Loading";
 import StarwarsLogo from "../../components/StarwarsLogo";
+import StarshipList from "./components/StarshipList";
+import Container from "../../components/Container";
 
 import { loadMoreStarship, searchStarship } from "../../api/starships";
+import { useStarships } from "../../contexts/StarshipContext";
 
-import {
-  StarshipList,
-  Container,
-  LoadMoreWrapper,
-  NoStarhip,
-} from "./Starships.styled";
-
-import { useStarships } from "../../contexts/starshipContext";
+import {} from "./Starships.styled";
 
 function Starships() {
   const [query, setQuery] = useState("");
-  const navigate = useNavigate();
   const { starships, setStarships, loading, setLoading } = useStarships();
-
-  const handleNavigate = (starship) => {
-    navigate("/starship-detail", {
-      state: {
-        starship,
-      },
-    });
-  };
 
   const handleLoadMore = async (url) => {
     if (!url) return null;
@@ -42,7 +26,7 @@ function Starships() {
       }));
       setLoading(false);
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
 
@@ -53,7 +37,7 @@ function Starships() {
       setStarships(response.data);
       setLoading(false);
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
 
@@ -68,30 +52,11 @@ function Starships() {
         }}
         onSearch={handleSearch}
       />
-      <StarshipList>
-        {starships?.results.map((starship) => (
-          <StarshipCard
-            starship={starship}
-            key={starship.name}
-            onClick={() => handleNavigate(starship)}
-          />
-        ))}
-        {starships?.results.length === 0 && (
-          <NoStarhip>
-            <p>There is no starship </p>
-          </NoStarhip>
-        )}
-        {starships?.next && (
-          <LoadMoreWrapper>
-            <LoadMoreButton
-              loading={loading}
-              onLoadMore={() => {
-                handleLoadMore(starships.next);
-              }}
-            />
-          </LoadMoreWrapper>
-        )}
-      </StarshipList>
+      <StarshipList
+        starships={starships}
+        loading={loading}
+        onLoadMore={() => handleLoadMore(starships.next)}
+      />
       {loading && <Loading />}
     </Container>
   );

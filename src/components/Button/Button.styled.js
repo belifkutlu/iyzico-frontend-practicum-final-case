@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledBackBtn = styled.button`
   border: 1px solid rgba(255, 196, 81, 1);
   padding: 10px;
+  color: ${({ theme }) => theme.colors.yellow};
   background-color: transparent;
   border-radius: 5px;
   margin-top: 30px;
