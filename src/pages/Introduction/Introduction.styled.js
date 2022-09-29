@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import introBg from "../../assests/images/introbg.jpg";
+import Background from "../../assests/images/Background.jpg";
 import StarwarsLogo from "../../components/StarwarsLogo";
 
 export const IntroWrapper = styled.div`
-  background-image: url("${introBg}");
+  background-image: url("${Background}");
   user-select: none;
 `;
 
@@ -108,7 +108,7 @@ export const IntroButton = styled.div`
   bottom: 50px;
   right: 50px;
   @media (max-width: 768px) {
-    top: 50px;
+    top: 20px;
     right: 20px;
     bottom: auto;
   }

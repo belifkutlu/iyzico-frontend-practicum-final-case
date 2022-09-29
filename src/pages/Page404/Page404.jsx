@@ -1,17 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import { HomeButton } from "./Page404.styled";
+import Img404 from "../../assests/images/404.png";
+
+import { Wrapper, Image404, HomeButton, NotAvailable } from "./Page404.styled";
 
 function Page404() {
+  const navigate = useNavigate();
+
   return (
-    <div>
-      <h1>404Page</h1>
-      <Link to="/">
-        {" "}
-        <HomeButton> Return to Base</HomeButton>
-      </Link>
-    </div>
+    <Wrapper>
+      <Image404 src={Img404} />
+      <HomeButton onClick={() => navigate("/")}>RETURN TO BASE</HomeButton>
+      <NotAvailable>The page you were looking does not exist</NotAvailable>
+    </Wrapper>
   );
 }
 
