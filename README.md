@@ -1,40 +1,40 @@
-# Star Wars Starships
+# 🚀 Star Wars Starships
 
 > In this project, I made a one-page application that lists star wars starships using SWAPI. An intro greets you in the app. You can switch between pages and go to the detail information of the starships cards.
 
-<hr/>
-
-## Built With
+## 🛠️ Built With
 
 - HTML
 
-* [![React][react.js]][react-url]
+[![React][react.js]][react-url]
 
-## Live Demo (if available)
+## 🔴 Live Demo
 
 [Live Demo Link](https://livedemo.com)
 
-## Project View
+## 💻 Project View
 
-### Mobile Screenshots
+### 📱 Mobile Screenshots
 
-![mobile](<`./src/assests/screenshots/localhost_3000_%20(1).png`>)
+![mobile]()
 
-### Desktop Screenshots
+### 🖥️ Desktop Screenshots
 
-![desktop 1](https://github.com/belifkutlu/fit-class-landing-page/blob/master/screenshots/desktop-1.png?raw=true)
-![desktop 2](https://github.com/belifkutlu/fit-class-landing-page/blob/master/screenshots/desktop-2.png?raw=true)
+![desktop 1]()
+![desktop 2](<https://github.com/belifkutlu/iyzico-frontend-practicum-final-case/blob/master/src/assests/screenshots/localhost_3000_%20(2).png?raw=true>)
 
-## Project Details
+## 📑 Project Details
 
 - Intoduction Page
 - Starships Page
 - StarshipDetail Page
 - 404 Page
 
-## Sources
+<hr/>
 
-- - Figma: [Figma](https://www.figma.com/file/JdVtI5lgft84FQ6aErTEtO/Star-wars?node-id=0%3A1 "my project in Figma")
+## 📚 Sources
+
+- Figma Project: [Figma](https://www.figma.com/file/JdVtI5lgft84FQ6aErTEtO/Star-wars?node-id=0%3A1 "my project in Figma")
 
 ## 👤 My Links
 
@@ -46,6 +46,6 @@
 
 Contributions, issues, and feature requests are welcome!
 
-## Show your support
+## 🎗️ Show your support
 
 Give a ⭐️ if you like this project!
