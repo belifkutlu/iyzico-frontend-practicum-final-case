@@ -1,7 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import VolumeMuteIcon from "../../../../components/Icons/VolumeMuteIcon";
 import VolumeUpIcon from "../../../../components/Icons/VolumeUpIcon";
+import audio from "../../../../assests/audio/starwars.ogg";
 
 import { VolumeWrapper } from "./VolumeButton.styled";
 
@@ -9,26 +10,32 @@ function Volume() {
   const [volume, setVolume] = useState(false);
   const audioRef = useRef();
 
+  useEffect(() => {
+    audioRef.current.play();
+  }, []);
+
   return (
     <>
       <VolumeWrapper
         onClick={() => {
-          console.log(audioRef.current);
           if (!volume) {
-            audioRef.current.play();
+            audioRef.current.muted = false;
           } else {
-            audioRef.current.pause();
+            audioRef.current.muted = true;
           }
           setVolume(!volume);
         }}
       >
         {volume ? <VolumeUpIcon /> : <VolumeMuteIcon />}
       </VolumeWrapper>
-      <audio
-        autoPlay
+      <video
+        style={{ display: "none" }}
+        loop
         ref={audioRef}
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/244725/MainTitle.ogg"
-      ></audio>
+        autoPlay
+        muted
+        src={audio}
+      ></video>
     </>
   );
 }

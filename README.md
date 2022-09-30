@@ -37,8 +37,11 @@
     </li>
     <li> <a href="#project-views">Project Wiews</a>
      <ul>
-      <li><a href="#mobile-screenshots">Mobile Screenshots</a></li>
-        <li><a href="#desktop-screenshots">Desktop Screenshots</a></li>
+      <li> <a href="#mobile-screenshots">Mobile Screenshots</a>
+      </li>
+        <li>
+        <a href="#desktop-screenshots">Desktop Screenshots</a>
+        </li>
       </ul>
     </li>
     <li> <a href="#project-details"></a>Project Details</li>

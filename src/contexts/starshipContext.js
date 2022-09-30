@@ -1,23 +1,44 @@
-import { createContext, useState, useEffect, useContext } from "react";
-import { getStarships } from "../api/starships";
+import { createContext, useContext, useReducer } from "react";
 
 const StarshipContext = createContext();
 
 export const StarshipProvider = ({ children }) => {
-  const [starships, setStarships] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  const value = { starships, setStarships, loading, setLoading };
-
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      const response = await getStarships();
-      setStarships(response.data);
-      setLoading(false);
+  const [state, dispatch] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "FETCH_STARSHIPS": {
+          return {
+            ...state,
+            starships: action.payload,
+          };
+        }
+        case "SET_LOADING": {
+          return {
+            ...state,
+            loading: action.payload,
+          };
+        }
+        case "LOAD_MORE_STARSHIPS": {
+          return {
+            ...state,
+            starships: {
+              ...action.payload,
+              results: [...state.starships.results, ...action.payload.results],
+            },
+          };
+        }
+        default: {
+          return state;
+        }
+      }
+    },
+    {
+      loading: false,
+      starships: null,
     }
-    fetchData();
-  }, []);
+  );
+
+  const value = { state, dispatch };
 
   return (
     <StarshipContext.Provider value={value}>

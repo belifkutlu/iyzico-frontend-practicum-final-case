@@ -7,22 +7,23 @@ import StarshipInfo from "./components/StarshipInfo";
 import getStarshipId from "../../utils/getStarshipId";
 
 import Button from "../../components/Button";
-import shadow from "../../assests/shadow.png";
+import shadow from "../../assests/images/shadow.png";
 import BackIcon from "../../components/Icons/BackIcon";
 
 import {
-  Content,
+  Wrapper,
   DetailHeader,
-  ModelName,
+  StarshipName,
+  StarhipModelWrapper,
+  StarshipModelName,
   RaitingWrapper,
+  RaitingStarsWrapper,
+  HipedriveRaitingTitle,
   HipedriveRaiting,
-  Section,
+  StarshipContent,
+  StarshipImagesGroup,
   StarshipImage,
   ShadowImage,
-  StarshipName,
-  StarshipImagesGroup,
-  RaitingStarsWrapper,
-  StarhipModelWrp,
 } from "./StarshipDetail.styled";
 
 function StarshipDetail() {
@@ -40,7 +41,7 @@ function StarshipDetail() {
       <Button onClick={() => navigate(-1)}>
         <BackIcon />
       </Button>
-      <Content>
+      <Wrapper>
         <DetailHeader>
           <StarshipName>{name}</StarshipName>
           <RaitingWrapper>
@@ -53,15 +54,15 @@ function StarshipDetail() {
                 edit={false}
                 isHalf
               />
-              <div>Hiperdrive Raiting</div>
+              <HipedriveRaitingTitle>Hiperdrive Raiting</HipedriveRaitingTitle>
             </RaitingStarsWrapper>
             <HipedriveRaiting>{hyperdrive_rating}</HipedriveRaiting>
           </RaitingWrapper>
         </DetailHeader>
-        <StarhipModelWrp>
-          <ModelName>Model: {model}</ModelName>
-        </StarhipModelWrp>
-        <Section>
+        <StarhipModelWrapper>
+          <StarshipModelName>Model: {model}</StarshipModelName>
+        </StarhipModelWrapper>
+        <StarshipContent>
           <StarshipImagesGroup>
             <StarshipImage
               src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png?updatedAt=1664296476820`}
@@ -70,8 +71,8 @@ function StarshipDetail() {
             <ShadowImage src={shadow} alt="" />
           </StarshipImagesGroup>
           <StarshipInfo starship={starship} />
-        </Section>
-      </Content>
+        </StarshipContent>
+      </Wrapper>
     </Container>
   );
 }

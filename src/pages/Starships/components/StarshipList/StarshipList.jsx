@@ -19,14 +19,14 @@ function StarshipList({ starships, loading, onLoadMore }) {
 
   return (
     <StyledStarshipList>
-      {starships?.results.map((starship) => (
+      {starships?.results?.map((starship) => (
         <StarshipCard
           starship={starship}
           key={starship.name}
           onClick={() => handleNavigate(starship)}
         />
       ))}
-      {starships?.results.length === 0 && (
+      {starships?.results?.length === 0 && (
         <NoStarship>We couldn't find any starships </NoStarship>
       )}
       {starships?.next && (

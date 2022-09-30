@@ -1,6 +1,6 @@
 import React from "react";
 
-import gif from "../../assests/2-unscreen.gif";
+import gif from "../../assests/images/loading.gif";
 
 import { LoadingGif, LoadWrapper } from "./Loading.styled";
 

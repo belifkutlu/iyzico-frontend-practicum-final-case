@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgimg from "../../assests/starsss.png";
+import bgimg from "../../assests/images/Background.jpg";
 
 export const StyledStarshipCard = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ export const StarshipName = styled.h3`
   margin: 0;
   text-align: center;
   height: 60px;
-  font-size: 30px;
+  text-transform: uppercase;
 `;
 
 export const StarshipImage = styled.img`
@@ -64,12 +64,24 @@ export const StarshipTitle = styled.div`
   justify-content: space-between;
 `;
 
-export const StarshipHiperdriveRating = styled.span`
+export const StarshipHiperdriveRating = styled.div`
   border: 1px solid #d6b055;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.white};
   padding: 5px;
+  text-align: center;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0 auto 20px auto;
+`;
+
+export const HiperdriveRaitingSkor = styled.div`
+  text-align: center;
+  font-size: 14px;
+  font-family: "Niveau Grotesk";
 `;
 
 export const StarshipModel = styled.p`

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import SearchInput from "../../components/SearchInput";
 import Loading from "../../components/Loading";
@@ -6,41 +6,60 @@ import StarwarsLogo from "../../components/StarwarsLogo";
 import StarshipList from "./components/StarshipList";
 import Container from "../../components/Container";
 
-import { loadMoreStarship, searchStarship } from "../../api/starships";
+import {
+  loadMoreStarship,
+  searchStarship,
+  getStarships,
+} from "../../api/starships";
 import { useStarships } from "../../contexts/StarshipContext";
 
 import {} from "./Starships.styled";
 
 function Starships() {
   const [query, setQuery] = useState("");
-  const { starships, setStarships, loading, setLoading } = useStarships();
+  const { state, dispatch } = useStarships();
+
+  const starships = state.starships;
+
+  useEffect(() => {
+    async function fetchData() {
+      dispatch({ type: "SET_LOADING", payload: true });
+      const response = await getStarships();
+      dispatch({ type: "FETCH_STARSHIPS", payload: response.data });
+      dispatch({ type: "SET_LOADING", payload: false });
+    }
+    if (!state.starships) {
+      fetchData();
+    }
+  }, [dispatch, state.starships]);
 
   const handleLoadMore = async (url) => {
     if (!url) return null;
     try {
-      setLoading(true);
+      dispatch({ type: "SET_LOADING", payload: true });
       const response = await loadMoreStarship(url);
-      setStarships((prevData) => ({
-        ...response.data,
-        results: [...prevData.results, ...response.data.results],
-      }));
-      setLoading(false);
+      dispatch({ type: "LOAD_MORE_STARSHIPS", payload: response.data });
+      dispatch({ type: "SET_LOADING", payload: false });
     } catch (err) {
       alert(err);
     }
   };
 
   const handleSearch = async () => {
+    // I don't want to send unnecessary request for search.
+    if (state?.starships?.results.length && !query.trim()) return;
+
     try {
-      setLoading(true);
+      dispatch({ type: "SET_LOADING", payload: true });
       const response = await searchStarship(query);
-      setStarships(response.data);
-      setLoading(false);
+      dispatch({ type: "FETCH_STARSHIPS", payload: response.data });
+      dispatch({ type: "SET_LOADING", payload: false });
     } catch (err) {
       alert(err);
     }
   };
 
+  console.log(state);
   return (
     <Container>
       <StarwarsLogo />
@@ -54,10 +73,10 @@ function Starships() {
       />
       <StarshipList
         starships={starships}
-        loading={loading}
+        loading={state.loading}
         onLoadMore={() => handleLoadMore(starships.next)}
       />
-      {loading && <Loading />}
+      {state.loading && <Loading />}
     </Container>
   );
 }

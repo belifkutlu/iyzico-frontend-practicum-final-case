@@ -1,19 +1,8 @@
 import styled from "styled-components";
 
-import bgimg from "../../assests/starsss.png";
+import bgimg from "../../assests/images/Background.jpg";
 
-export const DetailHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
-export const Content = styled.div`
+export const Wrapper = styled.div`
   margin-top: 20px;
   border: 3px solid ${({ theme }) => theme.colors.lightYellow};
   padding: 35px;
@@ -27,7 +16,33 @@ export const Content = styled.div`
   }
 `;
 
-export const StarhipModelWrp = styled.div`
+export const DetailHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const StarshipName = styled.h2`
+  font-size: 60px;
+  color: ${({ theme }) => theme.colors.yellow};
+  padding: 0 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+`;
+
+export const StarhipModelWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 0 5px 0 20px;
@@ -38,7 +53,7 @@ export const StarhipModelWrp = styled.div`
   }
 `;
 
-export const ModelName = styled.p`
+export const StarshipModelName = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.white};
   font-size: 20px;
@@ -74,6 +89,13 @@ export const RaitingStarsWrapper = styled.div`
   padding: 5px;
 `;
 
+export const HipedriveRaitingTitle = styled.div`
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: "Niveau Grotesk";
+`;
+
 export const HipedriveRaiting = styled.div`
   display: flex;
   justify-content: center;
@@ -95,7 +117,7 @@ export const HipedriveRaiting = styled.div`
   }
 `;
 
-export const Section = styled.div`
+export const StarshipContent = styled.div`
   display: flex;
   align-items: center;
   margin-top: 50px;
@@ -135,19 +157,4 @@ export const StarshipImage = styled.img`
 
 export const ShadowImage = styled.img`
   width: 100%;
-`;
-
-export const StarshipName = styled.h2`
-  font-size: 60px;
-  color: ${({ theme }) => theme.colors.yellow};
-  padding: 0 10px;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-
-  @media (max-width: 768px) {
-    font-size: 40px;
-    margin-bottom: 10px;
-    padding: 0;
-  }
 `;
