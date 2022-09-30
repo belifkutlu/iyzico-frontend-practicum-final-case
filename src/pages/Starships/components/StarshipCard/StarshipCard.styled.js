@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import bgimg from '../../assests/images/Background.jpg';
+import bgimg from '../../../../assests/images/Background.jpg';
 
 export const StyledStarshipCard = styled.div`
   display: flex;

@@ -42,9 +42,6 @@ function Starships() {
   };
 
   const handleSearch = async () => {
-    // I don't want to send unnecessary request for search.
-    if (state?.starships?.results.length && !query.trim()) return;
-
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
       const response = await searchStarship(query);
@@ -55,7 +52,6 @@ function Starships() {
     }
   };
 
-  console.log(state);
   return (
     <Container>
       <StarwarsLogo />

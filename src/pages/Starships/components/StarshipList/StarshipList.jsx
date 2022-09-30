@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import StarshipCard from '../../../../components/StarshipCard';
+import StarshipCard from '../StarshipCard';
 import LoadMoreButton from '../../../../components/LoadMoreButton';
 
 import { NoStarship, StyledStarshipList } from './StarshipList.styled';

@@ -65,7 +65,7 @@ function StarshipDetail() {
         <StarshipContent>
           <StarshipImagesGroup>
             <StarshipImage
-              src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png?updatedAt=1664296476820`}
+              src={`https://ik.imagekit.io/p4ls2huzsz/belifkutlu/starships/${id}.png?updatedAt=1664720910553`}
               alt="/"
             />
             <ShadowImage src={shadow} alt="" />

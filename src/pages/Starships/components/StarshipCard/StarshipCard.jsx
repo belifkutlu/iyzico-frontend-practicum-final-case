@@ -1,6 +1,7 @@
 import React from 'react';
-import getStarshipId from '../../utils/getStarshipId';
 import ReactStars from 'react-rating-stars-component';
+
+import getStarshipId from '../../../../utils/getStarshipId';
 
 import {
   StyledStarshipCard,
@@ -10,7 +11,6 @@ import {
   StarshipHiperdriveRating,
   HiperdriveRaitingSkor
 } from './StarshipCard.styled';
-
 function StarshipCard({ starship, onClick }) {
   const { name, url, model, hyperdrive_rating } = starship;
   const id = getStarshipId(url);
@@ -20,18 +20,20 @@ function StarshipCard({ starship, onClick }) {
       <StarshipName>{name}</StarshipName>
 
       <StarshipImage
-        src={`https://ik.imagekit.io/p4ls2huzsz/starships/${id}.png?updatedAt=1664296476820`}
+        src={`https://ik.imagekit.io/p4ls2huzsz/belifkutlu/starships/${id}.png?updatedAt=1664720910553`}
       />
       <StarshipHiperdriveRating>
-        <HiperdriveRaitingSkor>{hyperdrive_rating}</HiperdriveRaitingSkor>
-        <ReactStars
-          count={5}
-          size={10}
-          activeColor="#FFC451"
-          value={Number(hyperdrive_rating)}
-          edit={false}
-          isHalf
-        />
+        <HiperdriveRaitingSkor> {hyperdrive_rating}</HiperdriveRaitingSkor>
+        {hyperdrive_rating !== 'unknown' && (
+          <ReactStars
+            count={5}
+            size={10}
+            activeColor="#FFC451"
+            value={Number(hyperdrive_rating)}
+            edit={false}
+            isHalf
+          />
+        )}
       </StarshipHiperdriveRating>
       <StarshipModel>{model}</StarshipModel>
     </StyledStarshipCard>
