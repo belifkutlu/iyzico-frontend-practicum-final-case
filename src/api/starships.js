@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const searchStarship = async (query) => {
   return axios.get(`https://swapi.dev/api/starships/?search=${query}`);

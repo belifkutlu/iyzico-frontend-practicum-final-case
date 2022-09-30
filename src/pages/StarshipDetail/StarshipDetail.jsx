@@ -1,14 +1,14 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import ReactStars from "react-rating-stars-component";
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ReactStars from 'react-rating-stars-component';
 
-import Container from "../../components/Container";
-import StarshipInfo from "./components/StarshipInfo";
-import getStarshipId from "../../utils/getStarshipId";
+import Container from '../../components/Container';
+import StarshipInfo from './components/StarshipInfo';
+import getStarshipId from '../../utils/getStarshipId';
 
-import Button from "../../components/Button";
-import shadow from "../../assests/images/shadow.png";
-import BackIcon from "../../components/Icons/BackIcon";
+import Button from '../../components/Button';
+import shadow from '../../assests/images/shadow.png';
+import BackIcon from '../../components/Icons/BackIcon';
 
 import {
   Wrapper,
@@ -23,12 +23,12 @@ import {
   StarshipContent,
   StarshipImagesGroup,
   StarshipImage,
-  ShadowImage,
-} from "./StarshipDetail.styled";
+  ShadowImage
+} from './StarshipDetail.styled';
 
 function StarshipDetail() {
   const {
-    state: { starship },
+    state: { starship }
   } = useLocation();
   const navigate = useNavigate();
 

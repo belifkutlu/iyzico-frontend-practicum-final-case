@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const InfoWrapper = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const InfoTitle = styled.div`
   padding: 5px 20px;
   height: 30px;
   border-radius: 3px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
   background-color: ${({ theme }) => theme.colors.yellow};
   @media (max-width: 768px) {
     max-width: 150px;

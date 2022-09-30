@@ -1,23 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { titles } from "./StarshipInfo.constants";
+import { titles } from './StarshipInfo.constants';
 
-import {
-  Info,
-  InfoTitle,
-  InfoWrapper,
-  InfoValue,
-  InfoTitleWrapper,
-} from "./StarshipInfo.styled";
+import { Info, InfoTitle, InfoWrapper, InfoValue, InfoTitleWrapper } from './StarshipInfo.styled';
 
 function StarshipInfo({ starship }) {
-  const {
-    passengers,
-    max_atmosphering_speed,
-    manufacturer,
-    crew,
-    cargo_capacity,
-  } = starship;
+  const { passengers, max_atmosphering_speed, manufacturer, crew, cargo_capacity } = starship;
 
   return (
     <InfoWrapper>

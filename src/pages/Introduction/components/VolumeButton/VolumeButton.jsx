@@ -1,10 +1,10 @@
-import { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 
-import VolumeMuteIcon from "../../../../components/Icons/VolumeMuteIcon";
-import VolumeUpIcon from "../../../../components/Icons/VolumeUpIcon";
-import audio from "../../../../assests/audio/starwars.ogg";
+import VolumeMuteIcon from '../../../../components/Icons/VolumeMuteIcon';
+import VolumeUpIcon from '../../../../components/Icons/VolumeUpIcon';
+import audio from '../../../../assests/audio/starwars.ogg';
 
-import { VolumeWrapper } from "./VolumeButton.styled";
+import { VolumeWrapper } from './VolumeButton.styled';
 
 function Volume() {
   const [volume, setVolume] = useState(false);
@@ -24,18 +24,10 @@ function Volume() {
             audioRef.current.muted = true;
           }
           setVolume(!volume);
-        }}
-      >
+        }}>
         {volume ? <VolumeUpIcon /> : <VolumeMuteIcon />}
       </VolumeWrapper>
-      <video
-        style={{ display: "none" }}
-        loop
-        ref={audioRef}
-        autoPlay
-        muted
-        src={audio}
-      ></video>
+      <video style={{ display: 'none' }} loop ref={audioRef} autoPlay muted src={audio}></video>
     </>
   );
 }

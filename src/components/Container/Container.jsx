@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { ContainerWrapper } from "./Container.styled";
+import { ContainerWrapper } from './Container.styled';
 
 function Container({ children }) {
   return <ContainerWrapper>{children}</ContainerWrapper>;

@@ -1,6 +1,6 @@
-import React from "react";
-import getStarshipId from "../../utils/getStarshipId";
-import ReactStars from "react-rating-stars-component";
+import React from 'react';
+import getStarshipId from '../../utils/getStarshipId';
+import ReactStars from 'react-rating-stars-component';
 
 import {
   StyledStarshipCard,
@@ -8,8 +8,8 @@ import {
   StarshipImage,
   StarshipModel,
   StarshipHiperdriveRating,
-  HiperdriveRaitingSkor,
-} from "./StarshipCard.styled";
+  HiperdriveRaitingSkor
+} from './StarshipCard.styled';
 
 function StarshipCard({ starship, onClick }) {
   const { name, url, model, hyperdrive_rating } = starship;

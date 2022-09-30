@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import bgimg from "../../assests/images/Background.jpg";
+import bgimg from '../../assests/images/Background.jpg';
 
 export const Wrapper = styled.div`
   margin-top: 20px;
@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   padding: 35px;
   margin-bottom: 50px;
   margin-top: 30px;
-  background-image: url("${bgimg}");
+  background-image: url('${bgimg}');
   border-radius: 10px;
 
   @media (max-width: 768px) {
@@ -57,7 +57,7 @@ export const StarshipModelName = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.white};
   font-size: 20px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
   @media (max-width: 768px) {
     margin: 10px auto;
     font-size: 18px;
@@ -76,7 +76,7 @@ export const RaitingWrapper = styled.div`
     margin: 0;
     text-align: center;
     margin-top: 5px;
-    font-family: "Niveau Grotesk";
+    font-family: 'Niveau Grotesk';
     font-weight: 500;
     font-size: 16px;
     @media (max-width: 768px) {
@@ -93,7 +93,7 @@ export const HipedriveRaitingTitle = styled.div`
   text-align: center;
   margin-top: 5px;
   font-size: 14px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
 `;
 
 export const HipedriveRaiting = styled.div`
@@ -107,7 +107,7 @@ export const HipedriveRaiting = styled.div`
   height: 40px;
   font-weight: bold;
   font-size: 18px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
 
   @media (max-width: 768px) {
     width: 40px;

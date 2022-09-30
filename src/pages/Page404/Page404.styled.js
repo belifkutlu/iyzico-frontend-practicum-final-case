@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Button from "../../components/Button";
-import Background from "../../assests/images/Background.jpg";
+import Button from '../../components/Button';
+import Background from '../../assests/images/Background.jpg';
 
 export const HomeButton = styled(Button)`
   padding: 10px 100px;
@@ -18,7 +18,7 @@ export const HomeButton = styled(Button)`
 `;
 
 export const Wrapper = styled.div`
-  background-image: url("${Background}");
+  background-image: url('${Background}');
   width: 100%;
   height: 100vh;
   display: flex;
@@ -39,5 +39,5 @@ export const NotAvailable = styled.div`
   color: ${({ theme }) => theme.colors.yellow};
   font-size: 16px;
   margin-top: 10px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
 `;

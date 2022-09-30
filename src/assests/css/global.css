@@ -1,40 +1,40 @@
 @font-face {
-  font-family: "Zurich XCn BT";
-  src: url("../fonts/ZurichBT-ExtraCondensed.woff2") format("woff2"),
-    url("../fonts/ZurichBT-ExtraCondensed.woff") format("woff");
+  font-family: 'Zurich XCn BT';
+  src: url('../fonts/ZurichBT-ExtraCondensed.woff2') format('woff2'),
+    url('../fonts/ZurichBT-ExtraCondensed.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Niveau Grotesk";
-  src: url("../fonts/NiveauGroteskBold-SmallCaps.woff2") format("woff2"),
-    url("../fonts/NiveauGroteskBold-SmallCaps.woff") format("woff");
+  font-family: 'Niveau Grotesk';
+  src: url('../fonts/NiveauGroteskBold-SmallCaps.woff2') format('woff2'),
+    url('../fonts/NiveauGroteskBold-SmallCaps.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Niveau Grotesk";
-  src: url("../fonts/NiveauGroteskMedium.woff2") format("woff2"),
-    url("../fonts/NiveauGroteskMedium.woff") format("woff");
+  font-family: 'Niveau Grotesk';
+  src: url('../fonts/NiveauGroteskMedium.woff2') format('woff2'),
+    url('../fonts/NiveauGroteskMedium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Niveau Grotesk";
-  src: url("../fonts/NiveauGroteskRegular.woff2") format("woff2"),
-    url("../fonts/NiveauGroteskRegular.woff") format("woff");
+  font-family: 'Niveau Grotesk';
+  src: url('../fonts/NiveauGroteskRegular.woff2') format('woff2'),
+    url('../fonts/NiveauGroteskRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: "Zurich XCn BT";
+  font-family: 'Zurich XCn BT';
   background-color: #242831;
 }

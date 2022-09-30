@@ -1,13 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 
 const VolumeUpIcon = (props) => (
-  <svg
-    width={76}
-    height={76}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+  <svg width={76} height={76} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g filter="url(#a)">
       <circle cx={38} cy={38} r={26} fill="#F7C25D" />
     </g>
@@ -25,8 +19,7 @@ const VolumeUpIcon = (props) => (
         width={76}
         height={76}
         filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
-      >
+        colorInterpolationFilters="sRGB">
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
@@ -44,11 +37,7 @@ const VolumeUpIcon = (props) => (
         <feComposite in2="hardAlpha" operator="out" />
         <feColorMatrix values="0 0 0 0 0.841667 0 0 0 0 0.841667 0 0 0 0 0.841667 0 0 0 0.25 0" />
         <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_99_754" />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_99_754"
-          result="shape"
-        />
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow_99_754" result="shape" />
       </filter>
       <filter
         id="b"
@@ -57,8 +46,7 @@ const VolumeUpIcon = (props) => (
         width={39.333}
         height={31.333}
         filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
-      >
+        colorInterpolationFilters="sRGB">
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
@@ -70,11 +58,7 @@ const VolumeUpIcon = (props) => (
         <feComposite in2="hardAlpha" operator="out" />
         <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
         <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_99_754" />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_99_754"
-          result="shape"
-        />
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow_99_754" result="shape" />
       </filter>
     </defs>
   </svg>

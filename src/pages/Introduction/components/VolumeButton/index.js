@@ -1,1 +1,1 @@
-export { default } from "./VolumeButton";
+export { default } from './VolumeButton';

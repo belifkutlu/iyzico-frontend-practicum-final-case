@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import SearchIcon from "../Icons/SearchIcon";
+import styled from 'styled-components';
+import SearchIcon from '../Icons/SearchIcon';
 
 export const StyledSearchInput = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.lightYellow};

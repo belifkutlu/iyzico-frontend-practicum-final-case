@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import bgimg from "../../assests/images/Background.jpg";
+import styled from 'styled-components';
+import bgimg from '../../assests/images/Background.jpg';
 
 export const StyledStarshipCard = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const StyledStarshipCard = styled.div`
   min-height: 330px;
   cursor: pointer;
   padding: 20px;
-  background-image: url("${bgimg}");
+  background-image: url('${bgimg}');
   transition: all 0.15s ease-in-out;
   user-select: none;
 
@@ -81,7 +81,7 @@ export const StarshipHiperdriveRating = styled.div`
 export const HiperdriveRaitingSkor = styled.div`
   text-align: center;
   font-size: 14px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
 `;
 
 export const StarshipModel = styled.p`
@@ -90,6 +90,6 @@ export const StarshipModel = styled.p`
   margin: 0;
   text-align: center;
   font-size: 16px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
   font-weight: 500;
 `;

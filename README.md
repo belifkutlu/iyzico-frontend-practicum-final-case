@@ -1,5 +1,5 @@
 <br />
-<div align="center">
+<div align="center" id="readme-top">
   <a href="https://github.com/belifkutlu/iyzico-frontend-practicum-final-case">
     <img src="https://www.iyzico.com/assets/images/content/logo.svg?v=v4.0.288" alt="Logo" width="150" height="150">
   </a>
@@ -44,8 +44,8 @@
         </li>
       </ul>
     </li>
-    <li> <a href="#project-details"></a>Project Details</li>
-    <li> <a href="#sources"></a> Sources</li>
+    <li> <a href="#project-details">Project Details</a></li>
+    <li> <a href="#sources"> Sources</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -103,7 +103,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Project Views
 
-### 📱 Mobile Screenshots
+### Mobile Screenshots
 
 ![mobile 1](https://github.com/belifkutlu/iyzico-frontend-practicum-final-case/blob/master/screenshots/mobile-screenshots.png?raw=true)
 
@@ -111,7 +111,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <hr/>
 
-### 🖥️ Desktop Screenshots
+### Desktop Screenshots
 
 ![desktop 1](https://github.com/belifkutlu/iyzico-frontend-practicum-final-case/blob/master/screenshots/desktop-introducticon.png?raw=true)
 
@@ -123,7 +123,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📑 Project Details
+## Project Details
 
 - Intoduction Page
 - Starships Page
@@ -132,15 +132,15 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📚 Sources
+## Sources
 
-Figma Project Link: [Figma](https://www.figma.com/file/VmDhcxAA5JW8JFilAuMGIp/iyzico-frontend-practicum-final-case?node-id=1%3A543 "my project in Figma")
+Figma Project Link: [Figma](https://www.figma.com/file/VmDhcxAA5JW8JFilAuMGIp/iyzico-frontend-practicum-final-case?node-id=1%3A543 'my project in Figma')
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📞 Contact
+## Contact
 
-- GitHub: [Github](https://github.com/belifkutlu "my github profile")
+- GitHub: [Github](https://github.com/belifkutlu 'my github profile')
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/b%C3%BC%C5%9Fra-elif-kutlu-64a70b187/)
 
 - Project Link: [https://github.com/belifkutlu/iyzico-frontend-practicum-final-case](https://github.com/belifkutlu/iyzico-frontend-practicum-final-case)
@@ -149,7 +149,7 @@ Figma Project Link: [Figma](https://www.figma.com/file/VmDhcxAA5JW8JFilAuMGIp/iy
 
 <!-- ## 👤 My Links -->
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -166,22 +166,17 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🙏🏻 Acknowledgments
+## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-- [Malven's Grid Cheatsheet](https://grid.malven.co/)
-- [Img Shields](https://shields.io)
-- [GitHub Pages](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
-- [React Icons](https://react-icons.github.io/react-icons/search)
+- [How to use React Context effectively](https://kentcdodds.com/blog/how-to-use-react-context-effectively)
+- [Setup ESLINT and PRETTIER](https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b)
+- [How to use Themes in styled-components](https://dev.to/aromanarguello/how-to-use-themes-in-styled-components-49h)
 - [React SVGR](https://react-svgr.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🎗️ Show your support
+## Show your support
 
 Give a ⭐️ if you like this project!

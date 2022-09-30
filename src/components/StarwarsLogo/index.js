@@ -1,1 +1,1 @@
-export { default } from "./StarwarsLogo";
+export { default } from './StarwarsLogo';

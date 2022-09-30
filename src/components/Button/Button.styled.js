@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledBackBtn = styled.button`
   border: 1px solid rgba(255, 196, 81, 1);

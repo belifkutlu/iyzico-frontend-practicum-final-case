@@ -1,32 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import SearchInput from "../../components/SearchInput";
-import Loading from "../../components/Loading";
-import StarwarsLogo from "../../components/StarwarsLogo";
-import StarshipList from "./components/StarshipList";
-import Container from "../../components/Container";
+import SearchInput from '../../components/SearchInput';
+import Loading from '../../components/Loading';
+import StarwarsLogo from '../../components/StarwarsLogo';
+import StarshipList from './components/StarshipList';
+import Container from '../../components/Container';
 
-import {
-  loadMoreStarship,
-  searchStarship,
-  getStarships,
-} from "../../api/starships";
-import { useStarships } from "../../contexts/StarshipContext";
+import { loadMoreStarship, searchStarship, getStarships } from '../../api/starships';
+import { useStarships } from '../../contexts/StarshipContext';
 
-import {} from "./Starships.styled";
+import {} from './Starships.styled';
 
 function Starships() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const { state, dispatch } = useStarships();
 
   const starships = state.starships;
 
   useEffect(() => {
     async function fetchData() {
-      dispatch({ type: "SET_LOADING", payload: true });
+      dispatch({ type: 'SET_LOADING', payload: true });
       const response = await getStarships();
-      dispatch({ type: "FETCH_STARSHIPS", payload: response.data });
-      dispatch({ type: "SET_LOADING", payload: false });
+      dispatch({ type: 'FETCH_STARSHIPS', payload: response.data });
+      dispatch({ type: 'SET_LOADING', payload: false });
     }
     if (!state.starships) {
       fetchData();
@@ -36,10 +32,10 @@ function Starships() {
   const handleLoadMore = async (url) => {
     if (!url) return null;
     try {
-      dispatch({ type: "SET_LOADING", payload: true });
+      dispatch({ type: 'SET_LOADING', payload: true });
       const response = await loadMoreStarship(url);
-      dispatch({ type: "LOAD_MORE_STARSHIPS", payload: response.data });
-      dispatch({ type: "SET_LOADING", payload: false });
+      dispatch({ type: 'LOAD_MORE_STARSHIPS', payload: response.data });
+      dispatch({ type: 'SET_LOADING', payload: false });
     } catch (err) {
       alert(err);
     }
@@ -50,10 +46,10 @@ function Starships() {
     if (state?.starships?.results.length && !query.trim()) return;
 
     try {
-      dispatch({ type: "SET_LOADING", payload: true });
+      dispatch({ type: 'SET_LOADING', payload: true });
       const response = await searchStarship(query);
-      dispatch({ type: "FETCH_STARSHIPS", payload: response.data });
-      dispatch({ type: "SET_LOADING", payload: false });
+      dispatch({ type: 'FETCH_STARSHIPS', payload: response.data });
+      dispatch({ type: 'SET_LOADING', payload: false });
     } catch (err) {
       alert(err);
     }

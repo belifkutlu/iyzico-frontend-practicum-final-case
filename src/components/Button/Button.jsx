@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StyledBackBtn } from "./Button.styled";
+import { StyledBackBtn } from './Button.styled';
 
 function Button({ onClick, children, ...props }) {
   return (

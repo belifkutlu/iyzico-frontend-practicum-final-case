@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Background from "../../assests/images/Background.jpg";
-import StarwarsLogo from "../../components/StarwarsLogo";
+import Background from '../../assests/images/Background.jpg';
+import StarwarsLogo from '../../components/StarwarsLogo';
 
 export const IntroWrapper = styled.div`
-  background-image: url("${Background}");
+  background-image: url('${Background}');
   user-select: none;
 `;
 
@@ -90,7 +90,7 @@ export const IntroSubtitle = styled.h3`
   font-size: 40px;
   margin: 0;
   margin-top: 10px;
-  font-family: "Niveau Grotesk";
+  font-family: 'Niveau Grotesk';
 `;
 
 export const IntroButton = styled.div`

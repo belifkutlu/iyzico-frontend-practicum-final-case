@@ -1,14 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import {
-  StyledSearchInput,
-  StyledSearchIcon,
-  StyledSearchWrapper,
-} from "./SearchInput.styled";
+import { StyledSearchInput, StyledSearchIcon, StyledSearchWrapper } from './SearchInput.styled';
 
 function SearchInput({ value, onInputhange, onSearch, placeholder }) {
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       onSearch();
     }
   };

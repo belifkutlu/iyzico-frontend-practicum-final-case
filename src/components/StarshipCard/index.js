@@ -1,1 +1,1 @@
-export { default } from "./StarshipCard";
+export { default } from './StarshipCard';

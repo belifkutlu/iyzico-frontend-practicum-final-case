@@ -1,13 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import { Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import Starships from "./pages/Starships";
-import StarshipDetail from "./pages/StarshipDetail";
-import Introduction from "./pages/Introduction";
-import Page404 from "./pages/Page404";
+import Starships from './pages/Starships';
+import StarshipDetail from './pages/StarshipDetail';
+import Introduction from './pages/Introduction';
+import Page404 from './pages/Page404';
 
-import { StarshipProvider } from "./contexts/StarshipContext";
-import theme from "./theme";
+import { StarshipProvider } from './contexts/StarshipContext';
+import theme from './theme';
 
 function App() {
   return (
