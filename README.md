@@ -12,7 +12,7 @@
     <a href="https://github.com/belifkutlu/iyzico-frontend-practicum-final-case"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/belifkutlu/iyzico-frontend-practicum-final-case">View Demo</a>
+    <a href="https://starships-iyzico-final-case.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/belifkutlu/iyzico-frontend-practicum-final-case/issues">Report Bug</a>
     ·
